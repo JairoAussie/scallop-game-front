@@ -4,17 +4,11 @@ import { getQuizById } from '../services/quiz_services'
 import {
     WhatsappShareButton, 
     WhatsappIcon
-
+// 
   } from "react-share";
-//import { useGlobalState } from '../utils/stateContext'
-//import { deleteMessage } from '../services/messagesService'
 
 
 const QuestionDetails =()=>{
-    //console.log(match)
-    //console.log(message)
-    //const {store, dispatch} = useGlobalState()
-    //const {loggedInUser} = store
     const [quiz, setQuiz] = useState(null)
     const {id} = useParams()
 
