@@ -16,6 +16,9 @@ const App = () => {
       <h1>El juego del scallop</h1>
        <BrowserRouter>
         <Switch>
+          <Route exact path="/">
+            <Redirect to="/master" />
+          </Route>
           <Route exact path="/master" component={Master} />
           <Route exact path="/master/:id" component={QuestionDetails}/>
           <Route exact path="/todas" component={Todas} />

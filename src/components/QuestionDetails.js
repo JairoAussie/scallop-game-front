@@ -34,7 +34,7 @@ const QuestionDetails =()=>{
                 <h4>{quiz.question}</h4>
                 <p>Click en el ícono para compartir la pregunta por Whatsapp</p>
                 <WhatsappShareButton
-                    url={`http://localhost:3000/question/${id}`}
+                    url={`https://scallop-game.netlify.app/question/${id}`}
                     title="This is the scallop question"
                     separator=":: "
                 >
