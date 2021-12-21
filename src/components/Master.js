@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 // import { useGlobalState } from '../utils/stateContext'
 import { createQuiz} from '../services/quiz_services'
 
-const MessageForm =({history})=>{
+const Master =({history})=>{
     // const {store, dispatch} = useGlobalState()
     // const {loggedInUser} = store
     // const {id} = useParams()
@@ -38,14 +38,14 @@ const MessageForm =({history})=>{
         <div>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label htmlFor="text">Escribe la pregunta: </label>
-                    <input type="text" name="question" id="question" value={formData.question} onChange={handleFormData}/>
+                    <input type="text" name="question" id="question" placeholder='Escribe aquí la pregunta' value={formData.question} onChange={handleFormData}/>
                 </div>
-                <input type="submit" value="Enviar pregunta" />
+                <div><input type="submit" value="Enviar pregunta" className="btn" /> </div>
+
             </form>
             
         </div>
     )
 }
 
-export default MessageForm
+export default Master

@@ -25,19 +25,22 @@ const QuestionDetails =()=>{
         <div>
             {quiz? 
             <>
-                <h4>{quiz.question}</h4>
-                <p>Haz click en el ícono para compartir la pregunta por Whatsapp</p>
+                <span className='ayuda'> La pregunta de la semana:</span>
+                <h4 className='pregunta'>{quiz.question}</h4>
+                
                 <WhatsappShareButton
                     url={`https://scallop-game.netlify.app/question/${id}`}
                     title="Aquí está la pregunta del scallop de esta semana"
                     separator="-> "
                 >
-                    <WhatsappIcon size={32} round />
+                    <WhatsappIcon size={40} round />
                 </WhatsappShareButton>
+                <span className="ayuda">Haz click en el ícono para compartir la pregunta por Whatsapp</span>
                 <h4>Respuestas</h4>
                 {quiz.answers.map((answer, index)=>
                     <p key={index}>{answer.username}: {answer.answer}</p>
                 )}
+                
             </>
             :
                 <>

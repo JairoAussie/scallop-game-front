@@ -53,14 +53,12 @@ const UserQuestion =()=>{
                 <div>
                     <form onSubmit={handleSubmit}>
                         <div>
-                        <label htmlFor="text">Nombre del jugador: </label>
-                        <input type="text" name="username" id="username" value={formData.username} onChange={handleFormData}/>
+                        <input type="text" name="username" id="username" placeholder='Tu nombre' value={formData.username} onChange={handleFormData}/>
                         </div>
                         <div> 
-                        <label htmlFor="text">Cuál es la respuesta a la pregunta?</label>
-                        <input type="text" name="answer" id="answer" value={formData.answer} onChange={handleFormData}/>
+                        <input type="text" name="answer" id="answer" placeholder='La respuesta a la pregunta' value={formData.answer} onChange={handleFormData}/>
                         </div>
-                        <input type="submit" value="Envía tu respuesta" />
+                        <input className='btn' type="submit" value="Envía tu respuesta" />
                     </form>
                 </div>
             
