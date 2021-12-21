@@ -46,11 +46,12 @@ const UserQuestion =()=>{
         <div>
             {quiz? 
             <>
-                <h4>{quiz.question}</h4>
                 {participar? 
                     <p>{participar}</p>
                 :
                 <div>
+                    <span className='ayuda'> La pregunta de la semana:</span>
+                    <h4 className='pregunta'>{quiz.question}</h4>
                     <form onSubmit={handleSubmit}>
                         <div>
                         <input type="text" name="username" id="username" placeholder='Tu nombre' value={formData.username} onChange={handleFormData}/>

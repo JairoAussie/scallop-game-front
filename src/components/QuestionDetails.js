@@ -35,7 +35,7 @@ const QuestionDetails =()=>{
                 >
                     <WhatsappIcon size={40} round />
                 </WhatsappShareButton>
-                <span className="ayuda">Haz click en el ícono para compartir la pregunta por Whatsapp</span>
+                <span className="ayuda">Click aquí para compartir la pregunta</span>
                 <h4>Respuestas</h4>
                 {quiz.answers.map((answer, index)=>
                     <p key={index}>{answer.username}: {answer.answer}</p>

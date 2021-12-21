@@ -26,7 +26,6 @@ const Master =({history})=>{
         
         createQuiz(formData)
         .then((quiz) => {
-            console.log("add message to the list", quiz)
             return history.push(`/master/${quiz._id}`)
         })
         .catch(error => {console.log(error)})

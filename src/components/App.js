@@ -2,7 +2,6 @@ import React from 'react'
 import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom'
 import NotFound from './NotFound'
 import Master from './Master'
-import Todas from './Todas'
 import QuestionDetails from './QuestionDetails'
 import UserQuestion from './UserQuestion'
 import './App.css'
@@ -22,7 +21,6 @@ const App = () => {
           </Route>
           <Route exact path="/master" component={Master} />
           <Route exact path="/master/:id" component={QuestionDetails}/>
-          <Route exact path="/todas" component={Todas} />
           <Route exact path="/question/:id" component={UserQuestion}/>
           <Route component={NotFound} />
         </Switch>

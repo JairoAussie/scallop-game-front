@@ -24,7 +24,7 @@ const Todas = () => {
 
   return (
     <div >
-      <h1>Check the log</h1>     
+      <h1>Comprueba el log </h1>     
     </div>
   )
 }
