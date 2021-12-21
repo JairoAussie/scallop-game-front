@@ -35,8 +35,8 @@ const QuestionDetails =()=>{
                 <p>Click en el ícono para compartir la pregunta por Whatsapp</p>
                 <WhatsappShareButton
                     url={`https://scallop-game.netlify.app/question/${id}`}
-                    title="This is the scallop question"
-                    separator=":: "
+                    title="Aquí está la pregunta del scallop de esta semana"
+                    separator="-> "
                 >
                     <WhatsappIcon size={32} round />
                 </WhatsappShareButton>
