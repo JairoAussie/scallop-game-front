@@ -54,10 +54,10 @@ const UserQuestion =()=>{
                     <h4 className='pregunta'>{quiz.question}</h4>
                     <form onSubmit={handleSubmit}>
                         <div>
-                        <input type="text" name="username" id="username" placeholder='Tu nombre' value={formData.username} onChange={handleFormData}/>
+                            <input type="text" name="answer" id="answer" placeholder='La respuesta a la pregunta' value={formData.answer} onChange={handleFormData}/>
                         </div>
                         <div> 
-                        <input type="text" name="answer" id="answer" placeholder='La respuesta a la pregunta' value={formData.answer} onChange={handleFormData}/>
+                            <input type="text" name="username" id="username" placeholder='Tu nombre' value={formData.username} onChange={handleFormData}/>
                         </div>
                         <input className='btn' type="submit" value="Envía tu respuesta" />
                     </form>
