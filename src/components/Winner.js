@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {useParams} from 'react-router-dom'
 import { getQuizById } from '../services/quiz_services'
-
+import logo from './scallop.jpg';
 
 
 const Winner =()=>{
@@ -25,6 +25,7 @@ const Winner =()=>{
                         {filteredAnswer.username}
                     </p>
                 ))}  
+                <img src={logo} />
             </>
             :
                 <>

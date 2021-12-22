@@ -51,7 +51,7 @@ const QuestionDetails =({history})=>{
                     <li onClick={selectWinner} key={index} value={answer.username}>{answer.username}: {answer.answer}</li>
                 )}
                 </ul>
-                <span className="ayuda">y ahora... click para elegir al ganador...</span>
+                {quiz.answers.length !==0 && <span className='ayuda'>Y ahora... selecciona al ganador...</span>}
                 
             </>
             :
