@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import {useParams} from 'react-router-dom'
+import {useParams, Link} from 'react-router-dom'
 import { getQuizById, postAnswer } from '../services/quiz_services'
 
 const UserQuestion =()=>{
@@ -47,7 +47,14 @@ const UserQuestion =()=>{
             {quiz? 
             <>
                 {participar? 
-                    <p>{participar}</p>
+                    <>
+                        <p>{participar}</p>
+                        <Link to={`/question/${id}/winner`}>
+                            <button className='btn'>
+                            Comprueba si has ganado!
+                            </button>
+                        </Link>
+                    </>
                 :
                 <div>
                     <span className='ayuda'> La pregunta de la semana:</span>

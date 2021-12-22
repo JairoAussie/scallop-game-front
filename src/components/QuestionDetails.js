@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {useParams} from 'react-router-dom'
-import { getQuizById } from '../services/quiz_services'
+import { getQuizById, setWinner } from '../services/quiz_services'
 import {
     WhatsappShareButton, 
     WhatsappIcon
@@ -8,7 +8,7 @@ import {
   } from "react-share";
 
 
-const QuestionDetails =()=>{
+const QuestionDetails =({history})=>{
     const [quiz, setQuiz] = useState(null)
     const {id} = useParams()
 
@@ -18,7 +18,16 @@ const QuestionDetails =()=>{
         .catch(error => console.log(error))
     },[id])
 
+    function selectWinner(e){
+        e.preventDefault()
+        console.log(e.target.getAttribute('value'))
+        setWinner(id, {username: e.target.getAttribute('value')})
+        .then(() => {
+            return history.push(`/question/${quiz._id}/winner`)
 
+        })
+        .catch(error => {console.log(error)})
+    }
     //if (!message) return null
 
     return(
@@ -37,9 +46,12 @@ const QuestionDetails =()=>{
                 </WhatsappShareButton>
                 <span className="ayuda">Click aquí para compartir la pregunta</span>
                 <h4>Respuestas</h4>
+                <ul>
                 {quiz.answers.map((answer, index)=>
-                    <p key={index}>{answer.username}: {answer.answer}</p>
+                    <li onClick={selectWinner} key={index} value={answer.username}>{answer.username}: {answer.answer}</li>
                 )}
+                </ul>
+                <span className="ayuda">y ahora... click para elegir al ganador...</span>
                 
             </>
             :
