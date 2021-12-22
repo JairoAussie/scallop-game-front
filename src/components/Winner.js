@@ -25,7 +25,7 @@ const Winner =()=>{
                         {filteredAnswer.username}
                     </p>
                 ))}  
-                <img src={logo} />
+                <img src={logo} alt="Aburi scallop" />
             </>
             :
                 <>
